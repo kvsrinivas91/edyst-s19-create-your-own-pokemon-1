@@ -48,7 +48,8 @@ def create_Pokemon():
     db.session.add(new_pokemon)
     db.session.commit()
    
-    return Pokemon_Schema.jsonify(new_pokemon)
+    return Pokemon_Schema.jsonify({"pokemon":new_pokemon})
+    #return Pokemon_Schema.jsonify(new_pokemon)
  
 #Run server 
 if __name__=='__main__':
